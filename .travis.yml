@@ -1,2 +1,4 @@
 language: php
-script: vendor/bin/phpunit
+script: vendor/bin/phpunit --coverage-clover=coverage.xml
+after_success: codecov
+before_install: sudo pip install codecov
